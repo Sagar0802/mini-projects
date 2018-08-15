@@ -1,0 +1,37 @@
+body{
+    margin: 10px !important;
+    display: inline;
+}
+
+  .the-legend {
+    border-style: none;
+    border-width: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 0;
+    width: auto;
+    padding: 0 10px;
+    /* border: 1px solid #e0e0e0; */
+}
+.the-fieldset {
+    border: 1px solid #797575;
+    padding: 10px;
+    margin: 10px;
+}
+#calculator{
+    width: 50%;
+}
+
+@media (max-width: 991.98px) { 
+    
+    p[id="title"]{
+        display: none;
+    }
+ }
+ @media(min-width: 991.98px)
+ {
+     #contentid{
+         display: inline;
+     }
+ }
+ 

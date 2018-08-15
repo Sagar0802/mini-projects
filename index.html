@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Practice</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+
+<body>
+    <div class="container jumbotron">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#contentid" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="contentid">
+                <button type="button" class="btn btn-primary" ondblclick="createTable()" data-toggle="collapse" data-target="#table"><i
+                        class="fas fa-table"></i>
+                    <p id="title">Create table</p></button>
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#randomName"><i class="fas fa-random"></i>
+                    <p id="title">
+                        Random Character with Name
+                    </p></button>
+
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#calculator"><i class="fas fa-calculator "></i>
+                    <p id="title">
+                        Calculator
+                    </p></button>
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#crackCode"><i class="fas fa-code"></i>
+                    <p id="title">
+                        Crack Code
+                    </p></button>
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#arrayShuffle"><i
+                        class="fas fa-stream"></i>
+                    <p id="title">
+                        Array Shuffling
+                    </p></button>
+            </div>
+        </nav>
+
+        <div id="Tablecontent"></div>
+
+        <div id="contentUpdate">
+
+            <div id="table" class="collapse show the-fieldset">
+                <p>&ldquo; Double click on <mark>
+                        Create table
+                    </mark> to generate table and then click to view table &rdquo;</p>
+            </div>
+            <div id="randomName" class="collapse the-fieldset" align="center">
+                <b>Enter Name</b> <input type="text" id="name" class="form-control-sm">
+                <button class="btn" onclick="randomName()">Generate</button>
+                <div id="randomNameContent"></div>
+            </div>
+            <div id="calculator" class="collapse mx-auto">
+                
+                <fieldset class="the-fieldset">
+                    <legend class="the-legend"> Calculator</legend>
+                    First:
+                    <input type="text" id="num1" class="form-control"> Second:
+                    <input type="text" id="num2" class="form-control">
+
+               
+                    <div class="cal-btns" align="center">
+                        Result:
+                        <div ><b><input id="calcontent" type="text" class="form-control" value="0" disabled></b></div>
+                        <button class="btn" onclick="add()">
+                            <i class="fas fa-plus"></i> <p id="title">Add</p></button>
+                        <button class="btn" onclick="subtract()">
+                            <i class="fas fa-minus"></i> <p id="title">Subtract</p></button>
+                        <button class="btn" onclick="multiply()">
+                            <i class="fas fa-times"></i> <p id="title">Multiply</p></button>
+                        <button class="btn" onclick="divide()">
+                            <i class="fas fa-divide"></i><p id="title">Divide</p> </button>
+                            <button class="reset btn">
+                                    <i class="fas fa-eraser"></i><p id="title">Reset</p>
+                                       
+                            </button>
+                    </div>
+
+                </fieldset>
+            
+            </div>
+            <div id="crackCode" class="collapse the-fieldset" align="center">
+                <strong>Enter 3 Numbers from 0-9</strong><br>
+                <b>CODE:</b> <input type="text" id="code1" class="form-control-sm" placeholder="code1">
+                <input type="text" id="code2" class="form-control-sm" placeholder="code2">
+                <input type="text" id="code3" class="form-control-sm" placeholder="code3">
+                <input type="button" value="Crack Code" class="btn btn-primary" onclick="ccCheck()">
+                <div id="codeContent"></div>
+            </div>
+            <div class="collapse the-fieldset" id="arrayShuffle">
+                <div id="originalArray"><strong>Oiginal Array:</strong> <button class="btn btn-primary float-right" onclick="makeShuffle()"><i
+                            class="fas fa-stream"></i>Shuffle</button><br></div>
+                <div id="ShuffledArray"><strong>Shuffled Array</strong><br></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="myScript.js"></script>
+
+</body>
+
+</html>
